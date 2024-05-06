@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #CDE8E5;
+    overflow: hidden;
+}
+.main{
+    margin: 100px auto;
+    max-height: 90vh;
+}
+.container{
+    height: 70vh;
+    position: relative;
+    padding-right: 5px;
+    overflow: auto;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #1679AB;
+    
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+.container .form{
+    background-color: white;
+    overflow: hidden;
+    padding: 20px;
+}
+.container .form .form-input{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 5px;
+}
+.container .form input[type="text"]{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border: 2px solid #eee;
+    outline: none;
+    text-transform: capitalize;
+}
+.container .form input[type="text"]::placeholder{
+    transition: all .5s;
+}
+.container .form input[type="text"]:focus::placeholder{
+    opacity: 0;
+}
+.container .form input[type="submit"]{
+    border: none !important;
+    background-color: #1679AB;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    width: 70px;
+}
+.container .adds{
+    background-color: #f6f6f6;
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.container .adds .delete,
+.container .adds .update,
+.container .form .return{
+    color: rgb(184, 18, 18);
+    cursor: pointer;
+}
+.container .adds .update{
+    color: #1679AB;
+    font-size: 20px;
+}
+.container .adds .delete{
+    font-size: 20px;
+}
+.container .form .return{
+    color: #8B322C;    
+    margin: 10px 5px 0 0;
+    text-align: right;
+    display: none;
+}
+.container .error{
+    color: rgb(184, 18, 18);
+}
+.container .alert{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: capitalize;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 13%);
+    width: 400px;
+    transition: all 1s;
+}
+.container .alert .warn{
+    font-size: 35px;
+    background-color: rgb(243, 243, 35);
+    padding: 8px 25px;
+    border-radius: 50%;
+    color: rgb(197, 16, 16);
+}
+.container .alert h2{
+    margin: 15px 0 30px 0;
+}
+.container .alert .ok,
+.container .message .ok{
+    padding: 10px 20px;
+    background-color: #1679AB;
+    color: white;
+    cursor: pointer;
+}
+.container .message .ok{
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.hide{
+    top: 0 !important;
+}
+.message{
+    background-color: #f6f6f6;
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    display: none;
+}
+.display{
+    display: flex !important;
+}
+.pointer{
+    pointer-events: none;
+    cursor: no-drop;
+}
+
+.focus{
+    border: 2px solid red !important;
+}
+.main .info .spans{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.main .info .count{
+    padding: 10px 20px;
+    background-color: white;
+    text-transform: capitalize;
+    border-radius: 4px;
+
+}
+.main .info .clear{
+    background-color: #1679AB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.main .sure{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    width: 400px;
+    text-transform: capitalize;
+    bottom: -100%;
+    transition: all 0.5s;
+}
+.main .sure h2{
+    margin: 5px 0 25px;
+    text-align: center;
+    font-size: 20px;
+}
+.main .sure .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 40px;
+}
+.main .sure .btn .yes,
+.main .sure .btn .no{
+    background-color: #1679AB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.main .sure .btn .no{
+    background-color: rgb(184, 18, 18);
+}
+.push{
+    bottom: 0 !important;
+}
+.event{
+    pointer-events: none !important;
+    cursor: no-drop;
+    opacity: 0.4 !important;
+}
+.opacity{
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+}
+.margin_left{
+    margin-left: auto !important;
+}
+.todo{
+    flex-basis: 88%;
+    word-break: break-all;
+}
+.decoration{
+    text-decoration: line-through !important;
+}
+.adds .collect{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+/* start media */
+@media (min-width: 300px){
+    .main{
+        width: 300px;
+    }
+}
+@media (min-width: 350px){
+    .main{
+        width: 350px;
+    }
+}
+@media (min-width: 400px){
+    .main{
+        width: 400px;
+    }
+}
+@media (max-width: 430px){
+    .main .sure{
+        width: 300px;
+    }
+    .main .alert{
+        width: 300px;
+    }
+    .main .sure h2{
+        line-height: 1.5;
+    }
+}
+@media (min-width: 500px){
+    .main{
+        width: 500px;
+    }
+    .alert{
+        width: 300px;
+    }
+}
+@media (min-width: 600px){
+    .main{
+        width: 600px;
+    }
+}
+@media (max-width: 767px){
+    .main{
+        margin: 80px auto;
+    }
+    .delete,
+    .update{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .collect{
+        gap: 3px !important;
+    }
+    .todo{
+        flex-basis: 70%;
+        line-height: 1.4;
+    }
+}

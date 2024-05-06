@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="icon" href="img/7692809.png">
+    <title>Todolist</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="form">
+                <div class="form-input">
+                    <input type="text" placeholder="Write Your Todolist">
+                    <input type="submit" value="Create">
+                </div>
+                <i onclick="UI.return()" class="fa-solid fa-right-left return"></i>
+            </div>
+            <div class="message"></div>
+            <div class="list"></div>
+            <div class="alert">
+                <i class="fa-solid fa-exclamation warn"></i>
+                <h2>The task already exists</h2>
+                <span class="ok">Ok</span>
+            </div>
+        </div>
+        <div class="info">
+            <div class="spans"></div>
+        </div>
+        <div class="sure">
+            <h2>are you sure you want to delete all tasks</h2>
+            <div class="btn">
+                <span class="yes">Yes</span>
+                <span class="no">no</span>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
